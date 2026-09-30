@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 
 // Core shell components
 import Preloader from './components/Preloader';
@@ -31,6 +32,8 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
+      
+      <Analytics />
     </BrowserRouter>
   );
 }
